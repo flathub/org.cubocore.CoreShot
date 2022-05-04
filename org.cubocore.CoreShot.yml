@@ -6,7 +6,7 @@ command: coreshot
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --filesystem=xdg-pictures
+  - --filesystem=host
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 cleanup:
