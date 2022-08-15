@@ -27,7 +27,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.3.0
+        tag: v4.4.1
   - name: coreshot
     post-install:
       - install -Dp -m 644 org.cubocore.CoreShot.appdata.xml /app/share/appdata/org.cubocore.CoreShot.appdata.xml
@@ -41,4 +41,4 @@ modules:
         path: org.cubocore.CoreShot.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coreshot.git
-        tag: v4.3.0
+        tag: v4.4.0
