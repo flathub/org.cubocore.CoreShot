@@ -7,7 +7,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --filesystem=xdg-pictures
-  - --filesystem=xdg-config
+  - --filesystem=xdg-config:create
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 cleanup:
