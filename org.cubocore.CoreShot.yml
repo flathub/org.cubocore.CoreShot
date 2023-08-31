@@ -7,7 +7,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --filesystem=xdg-pictures # Saving images in pictures folder
-  - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config
+  - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config:create
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 cleanup:
