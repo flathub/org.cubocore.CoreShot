@@ -6,8 +6,8 @@ command: coreshot
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-config:create
+  - --filesystem=xdg-pictures # Saving images in pictures folder
+  - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 cleanup:
@@ -22,9 +22,6 @@ cleanup:
 modules:
   - name: libcprime
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
@@ -33,10 +30,6 @@ modules:
     post-install:
       - install -Dp -m 644 org.cubocore.CoreShot.appdata.xml /app/share/appdata/org.cubocore.CoreShot.appdata.xml
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DCMAKE_LIBRARY_PATH=/app/lib
     sources:
       - type: file
         path: org.cubocore.CoreShot.appdata.xml
