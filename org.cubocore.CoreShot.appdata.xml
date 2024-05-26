@@ -5,21 +5,21 @@
     <id>org.cubocore.CoreShot</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0</project_license>
-    
+
     <project_group>CuboCore</project_group>
     <developer_name>CuboCore Group</developer_name>
-    
+
     <launchable type="desktop-id">org.cubocore.CoreShot.desktop</launchable>
-    
+
     <name>CoreShot</name>
     <summary>A simple lightweight screen capture utility for X11</summary>
-    
+
     <description>
         <p>
             CoreShot a simple app that can capture images of the screen. It can capture the whole screen, a specified region, an individual window, or only part of a window.
         </p>
     </description>
-    
+
     <keywords>
       <keyword>CoreShot</keyword>
       <keyword>Screen Capture</keyword>
@@ -40,17 +40,13 @@
     <url type="help">https://gitlab.com/cubocore/coreapps/coreshot/-/blob/master/README.md</url>
     <url type="bugtracker">https://gitlab.com/cubocore/coreapps/coreshot/-/issues</url>
     <url type="contact">https://app.element.io/#/room/#cubocore:matrix.org</url>
-    
+
     <releases>
         <release version="4.5.0" date="2023-08-27"/>
         <release version="4.4.0" date="2022-08-02"/>
         <release version="4.3.0" date="2021-12-25"/>
     </releases>
-    
-    <provides>
-        <id>org.cubocore.CoreShot</id>
-    </provides>
-    
+
     <screenshots>
         <screenshot type="default">
             <caption>CoreShot</caption>

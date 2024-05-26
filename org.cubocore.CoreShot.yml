@@ -1,13 +1,12 @@
 app-id: org.cubocore.CoreShot
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: '5.15-23.08'
 sdk: org.kde.Sdk
 command: coreshot
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --filesystem=xdg-pictures # Saving images in pictures folder
-  - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config:create
+  - --filesystem=home # Saving images in pictures folder and for xdg-config
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 cleanup:
