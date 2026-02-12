@@ -1,8 +1,11 @@
 app-id: org.cubocore.CoreShot
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: coreshot
+rename-desktop-file: cc.cubocore.CoreShot.desktop
+rename-icon: cc.cubocore.CoreShot
+rename-appdata-file: cc.cubocore.CoreShot.metainfo.xml
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -21,17 +24,20 @@ cleanup:
 modules:
   - name: libcprime
     buildsystem: cmake-ninja
+    config-opts: [
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    ]
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.5.0
+        commit: 17d4c94f3be2c7f67dc757cf852f0144945c2c69
+        tag: v5.0.1
   - name: coreshot
-    post-install:
-      - install -Dp -m 644 org.cubocore.CoreShot.appdata.xml /app/share/appdata/org.cubocore.CoreShot.appdata.xml
     buildsystem: cmake-ninja
     sources:
-      - type: file
-        path: org.cubocore.CoreShot.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coreshot.git
-        tag: v4.5.0
+        commit: c5ec401d5896cf4fc1ba2f3b995b2a6f0609c5d1
+        tag: v5.0.1
+      - type: patch
+        path: fix-appID-name.patch
