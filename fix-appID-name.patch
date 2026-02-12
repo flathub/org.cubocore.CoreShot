@@ -1,0 +1,29 @@
+--- a/cc.cubocore.CoreShot.desktop
++++ b/cc.cubocore.CoreShot.desktop
+@@ -5,4 +5,4 @@
+ Exec=coreshot
+-Icon=cc.cubocore.CoreShot
++Icon=org.cubocore.CoreShot
+ Type=Application
+ Categories=Qt;Utility;X-CSuite;
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -31,3 +31,3 @@
+ #include "coreshotdialog.h"
+ 
+-extern const QString appID = APP_ID;
++extern const QString appID = QStringLiteral("org.cubocore.CoreShot");
+ 
+--- a/cc.cubocore.CoreShot.metainfo.xml
++++ b/cc.cubocore.CoreShot.metainfo.xml
+@@ -5,3 +5,3 @@
+ <component type="desktop-application">
+- <id>cc.cubocore.CoreShot</id>
++ <id>org.cubocore.CoreShot</id>
+ 
+@@ -10,3 +10,3 @@
+  <project_group>CuboCore</project_group>
+  <developer_name>CuboCore Group</developer_name>
+- <launchable type="desktop-id">cc.cubocore.CoreShot.desktop</launchable>
++ <launchable type="desktop-id">org.cubocore.CoreShot.desktop</launchable>
+
